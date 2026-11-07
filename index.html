@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXUS // Cyber Event Network</title>
+  <meta name="description" content="A futuristic cyber event management platform.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="cursorGlow"></div>
+  <div class="noise"></div>
+  <div class="scanlines"></div>
+  <div class="grid-bg"></div>
+
+  <header class="nav">
+    <a class="brand" href="#home">
+      <span class="brand-mark"><i></i><i></i><i></i></span>
+      <span>NEXUS<span class="cyan">.EVENTS</span></span>
+    </a>
+
+    <nav id="mainNav">
+      <a href="#events">EVENTS</a>
+      <a href="#network">NETWORK</a>
+      <a href="#about">ABOUT</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">◐</button>
+      <a href="#events" class="nav-cta">EXPLORE <span>↗</span></a>
+      <button class="menu-btn" id="menuBtn">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-orb orb-a"></div>
+      <div class="hero-orb orb-b"></div>
+
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="pulse"></span> NEXT-GEN EVENT NETWORK <span class="line"></span> 2026</div>
+        <h1>ENTER THE<br><span>FUTURE.</span></h1>
+        <p class="hero-text">Discover immersive conferences, cyber summits, creative labs and digital experiences built for people shaping tomorrow.</p>
+        <div class="hero-buttons">
+          <a href="#events" class="btn primary">EXPLORE EVENTS <b>↗</b></a>
+          <button class="btn ghost" id="randomBtn">RANDOM EVENT <b>⌁</b></button>
+        </div>
+        <div class="hero-stats">
+          <div><strong>24</strong><span>EVENTS</span></div>
+          <div><strong>18K+</strong><span>MEMBERS</span></div>
+          <div><strong>42</strong><span>CITIES</span></div>
+        </div>
+      </div>
+
+      <div class="hero-terminal reveal">
+        <div class="terminal-top">
+          <span><i></i> NEXUS_OS // LIVE FEED</span>
+          <span>SECURE</span>
+        </div>
+        <div class="terminal-body">
+          <p><span class="dim">01</span> booting event network...</p>
+          <p><span class="dim">02</span> scanning <b>24</b> active nodes</p>
+          <p><span class="dim">03</span> next transmission found</p>
+          <div class="terminal-event">
+            <div class="event-code">NX//001</div>
+            <div>
+              <h3>NEON HORIZON</h3>
+              <p>AI · CYBER · FUTURE TECH</p>
+            </div>
+            <span class="status">ONLINE</span>
+          </div>
+          <div class="terminal-bar"><span></span></div>
+          <p class="cursor-line">root@nexus:~$ <span class="typing">awaiting your signal_</span></p>
+        </div>
+      </div>
+
+      <div class="scroll-indicator"><span></span> SCROLL TO CONNECT</div>
+    </section>
+
+    <section class="ticker">
+      <div class="ticker-track">
+        <span>◈ CYBER CULTURE</span><span>✦ AI & ROBOTICS</span><span>◈ DIGITAL ART</span><span>✦ FUTURE TECH</span>
+        <span>◈ CYBER CULTURE</span><span>✦ AI & ROBOTICS</span><span>◈ DIGITAL ART</span><span>✦ FUTURE TECH</span>
+      </div>
+    </section>
+
+    <section class="events section" id="events">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">01 // EVENT DATABASE</div>
+          <h2>ACCESS THE <span>NETWORK</span></h2>
+        </div>
+        <p>Filter the signal. Find your next experience.</p>
+      </div>
+
+      <div class="control-panel reveal">
+        <div class="search-wrap">
+          <span>⌕</span>
+          <input id="searchInput" type="search" placeholder="Search event, city, category...">
+        </div>
+        <div class="filters" id="filters">
+          <button class="filter active" data-filter="all">ALL</button>
+          <button class="filter" data-filter="tech">TECH</button>
+          <button class="filter" data-filter="creative">CREATIVE</button>
+          <button class="filter" data-filter="business">BUSINESS</button>
+          <button class="filter" data-filter="music">MUSIC</button>
+        </div>
+      </div>
+
+      <div class="event-feature reveal" id="featuredEvent"></div>
+      <div class="event-grid" id="eventGrid"></div>
+    </section>
+
+    <section class="countdown-section section" id="network">
+      <div class="countdown-card reveal">
+        <div class="countdown-copy">
+          <div class="eyebrow">02 // NEXT TRANSMISSION</div>
+          <h2>NEON HORIZON <span>26</span></h2>
+          <p>AI, robotics, spatial computing and the architecture of tomorrow — under one signal.</p>
+          <button class="btn primary" data-event="1">ACCESS EVENT <b>↗</b></button>
+        </div>
+        <div class="countdown" id="countdown">
+          <div><strong id="days">00</strong><span>DAYS</span></div>
+          <i>:</i>
+          <div><strong id="hours">00</strong><span>HOURS</span></div>
+          <i>:</i>
+          <div><strong id="mins">00</strong><span>MIN</span></div>
+          <i>:</i>
+          <div><strong id="secs">00</strong><span>SEC</span></div>
+        </div>
+        <div class="corner c1"></div><div class="corner c2"></div>
+      </div>
+    </section>
+
+    <section class="network section" id="about">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">03 // WHY NEXUS</div>
+          <h2>BUILT FOR <span>THE NEXT</span></h2>
+        </div>
+      </div>
+      <div class="feature-grid">
+        <article class="feature reveal">
+          <div class="feature-icon">⌁</div>
+          <h3>IMMERSIVE</h3>
+          <p>Events designed as experiences — not another room full of chairs and slides.</p>
+          <span>01 / 03</span>
+        </article>
+        <article class="feature reveal">
+          <div class="feature-icon">◉</div>
+          <h3>CONNECTED</h3>
+          <p>Meet builders, creators, founders, artists and people operating at the edge.</p>
+          <span>02 / 03</span>
+        </article>
+        <article class="feature reveal">
+          <div class="feature-icon">⟐</div>
+          <h3>FORWARD</h3>
+          <p>Every event explores what comes next — technology, culture and human potential.</p>
+          <span>03 / 03</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="cta-inner reveal">
+        <div class="eyebrow">YOUR NEXT NODE IS WAITING</div>
+        <h2>READY TO <span>CONNECT?</span></h2>
+        <p>Join the network. Choose your signal. Experience what is next.</p>
+        <a href="#events" class="btn primary">BROWSE ALL EVENTS <b>↗</b></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">
+      <span class="brand-mark"><i></i><i></i><i></i></span>
+      <span>NEXUS<span class="cyan">.EVENTS</span></span>
+    </div>
+    <p>© 2026 NEXUS EVENT NETWORK // ALL SYSTEMS OPERATIONAL</p>
+    <div class="socials"><span>IG</span><span>IN</span><span>GH</span></div>
+  </footer>
+
+  <div class="modal" id="eventModal">
+    <div class="modal-card">
+      <button class="close" data-close="eventModal">×</button>
+      <div id="eventModalContent"></div>
+    </div>
+  </div>
+
+  <div class="modal" id="registerModal">
+    <div class="register-card">
+      <button class="close" data-close="registerModal">×</button>
+      <div class="form-side">
+        <div class="eyebrow">SECURE REGISTRATION</div>
+        <h2>JOIN THE <span>NETWORK</span></h2>
+        <p id="selectedEventText">Register for an event and receive your access confirmation.</p>
+        <div class="secure-note">⌁ YOUR DATA IS STORED LOCALLY ON THIS DEVICE</div>
+      </div>
+      <form id="registerForm">
+        <label>FULL NAME<input id="name" required type="text" placeholder="Enter your name"></label>
+        <label>EMAIL ADDRESS<input id="email" required type="email" placeholder="you@example.com"></label>
+        <label>PHONE NUMBER<input id="phone" required type="tel" pattern="[0-9]{10}" placeholder="10-digit number"></label>
+        <label>SELECT EVENT<select id="eventSelect" required></select></label>
+        <button class="btn primary full" type="submit">CONFIRM ACCESS <b>↗</b></button>
+        <div class="form-message" id="formMessage"></div>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"><span>✓</span><div><b>ACCESS GRANTED</b><small id="toastText">Registration saved.</small></div></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
